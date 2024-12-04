@@ -22,13 +22,13 @@ async function fetchData(endpoint) {
     }
     const data = await response.json();
 
-    dataContainer.innerHTML = ""; // Clear the container
+    dataContainer.innerHTML = ""; 
 
     data.forEach((item) => {
       const card = document.createElement("div");
       card.classList.add("card");
 
-      // Customize card content based on endpoint
+    
       if (endpoint === "posts") {
         card.innerHTML = `
           <h3>${item.title}</h3>
